@@ -32,7 +32,7 @@ namespace Show_Hide_a_Control
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+           _action(parameter);
         }
     }
 }
