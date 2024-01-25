@@ -21,10 +21,12 @@
     
     <Grid>
         <Border Style="{Binding Source={StaticResource borderBackground}}"/>
-        <Button Style="{StaticResource Btn_Menu}"/>
+        <Button Style="{StaticResource Btn_Menu}"
+                Command="{Binding ShowPanel}"/>
 
-        <Border Style="{StaticResource nav_panel}" Visibility="{Binding IspanlShow, Converter={StaticResource BooleanToVisibilityConverter}}">
-            <Button Style="{StaticResource btn_close}"/>
+        <Border Style="{StaticResource nav_panel}" Visibility="{Binding IspanelVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Button Style="{StaticResource btn_close}"
+                    />
         </Border>
     </Grid>
 </Window>

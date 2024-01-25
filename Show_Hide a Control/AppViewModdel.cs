@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Show_Hide_a_Control
 {
@@ -17,22 +18,28 @@ namespace Show_Hide_a_Control
         }
 
 
-        bool _ispanlShow;
-
         public AppViewModdel()
         {
-            _ispanlShow = false;
+            IspanelVisible = false;
         }
 
-        public bool IspanlShow
+        bool ispanelVisible;
+
+       public bool IspanelVisible
         {
-            get { return _ispanlShow; }
+            get
+            {
+                return ispanelVisible;
+            }
             set
             {
-                _ispanlShow = value;
-                OnPropertyChange("IspanlShow");
+                ispanelVisible = value;
+                OnPropertyChange("IspanelVisible");
             }
         }
+
+
+
 
     }
 }
