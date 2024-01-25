@@ -28,5 +28,8 @@
             <Button Style="{StaticResource btn_close}"
                     Command="{Binding hidePanel}"/>
         </Border>
+
+        <Button Style="{StaticResource btn_shutdown}"
+                Command="{Binding CloseApp}"/>
     </Grid>
 </Window>

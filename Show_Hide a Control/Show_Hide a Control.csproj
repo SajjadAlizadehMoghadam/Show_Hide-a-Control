@@ -110,5 +110,8 @@
     <Resource Include="Img\close-button.png" />
     <Resource Include="Img\close.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\shutdown.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

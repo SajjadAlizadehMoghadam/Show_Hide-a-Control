@@ -75,5 +75,25 @@ namespace Show_Hide_a_Control
         }
 
 
+        ICommand _closeApp;
+
+        public void IsCloseApp(object obj)
+        {
+            MainWindow win = (MainWindow)obj;
+            win.Close();
+        }
+
+        public ICommand CloseApp
+        {
+            get
+            {
+                if(_closeApp == null)
+                {
+                    _closeApp = new ReplyCommand(p => IsCloseApp(p));
+                }
+                return _closeApp;
+            }
+        }
+
     }
 }
