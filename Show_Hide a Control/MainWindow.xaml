@@ -1,0 +1,30 @@
+﻿<Window x:Class="Show_Hide_a_Control.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Show_Hide_a_Control"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Window.DataContext>
+        <local:AppViewModdel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Window.Resources>
+    
+    
+    <Grid>
+        <Border Style="{Binding Source={StaticResource borderBackground}}"/>
+        <Button Style="{StaticResource Btn_Menu}"/>
+
+        <Border Style="{StaticResource nav_panel}" Visibility="{Binding IspanlShow, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Button Style="{StaticResource btn_close}"/>
+        </Border>
+    </Grid>
+</Window>
